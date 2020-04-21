@@ -3,7 +3,7 @@
 # Horizontal Scaling of Aggregated Microservices
 ## Using Solace Messaging in Cloud Foundry
 
-The goal of this demo is to illustrate a real world example of using messaging between microservices in the cloud. This demo illustrates the Aggregator Microservice Design Pattern using an event driven architecture with messaging to communicate between Microservices, specifically Solace Messaging in Pivotal Cloud Foundry. 
+The goal of this demo is to illustrate a real world example of using messaging between microservices in the cloud. This demo illustrates the Aggregator Microservice Design Pattern using an event driven architecture with messaging to communicate between Microservices, specifically Solace Messaging in VMware Tanzu (formerly Pivotal Cloud Foundry). 
 
 ### Related project - SolaceLabs/solace-messaging-demo
 
@@ -33,7 +33,7 @@ As illustrated in the architecture diagram above, this demo is composed of the f
 3. The worker applications process messages from the Solace queue. The application can be horizontally scaled using Cloud Foundry to increase the overall processing throughput of the system.
 4. When a Worker is done with a work request, it sends the response. For the purposes of this demo, the Aggregator Application tracks and displays status of each job in the summary table below.
 5. The Aggregator Application and Worker Applications depend on a Solace Messaging Service for Cloud Foundry.
-6. All of the apps are pushed to Cloud Foundry through the CLI or Pivotal Apps Manager.
+6. All of the apps are pushed to Cloud Foundry through the CLI or VMware Tanzu Apps Manager.
 
 ## Deploying to Cloud Foundry
 
@@ -41,8 +41,8 @@ As illustrated in the architecture diagram above, this demo is composed of the f
 
 This demo depends on Solace Messaging for Cloud Foundry being installed and available in the Cloud Foundry marketplace. If that is not already done, use the following links:
 
-* [PCF Tile Download from Pivotal Network](https://network.pivotal.io/)
-* [Solace Messaging for Pivotal Cloud Foundry Documentation](http://docs.pivotal.io/solace-messaging/)
+* [Tile Download from VMware Tanzu Network](https://network.pivotal.io/products/solace-pubsub/)
+* [Solace Messaging for VMWare Tanzu Documentation](http://docs.pivotal.io/solace-messaging/)
 
 The demo applications specify a dependency on a Solace Messaging service instance named `solace-messaging-demo-instance`. To create the required Solace messaging service instance, do the following:
 
@@ -87,7 +87,7 @@ The worker application is a Solace Messaging application that binds and listens 
 
 ### Accessing the Web UI
 
-You can access the demo Web UI, by browsing to the Aggregator application's URL. You can find this URL from Pivotal Apps Manager or through the Cloud Foundry CLI as follows:
+You can access the demo Web UI, by browsing to the Aggregator application's URL. You can find this URL from Apps Manager or through the Cloud Foundry CLI as follows:
 
 	$ cf apps
 	Getting apps in org demo / space demo as demoUser...
@@ -138,6 +138,6 @@ Here are some interesting links if you're new to these concepts:
 * [Martin Fowler on Microservices](http://martinfowler.com/articles/microservices.html)
 * [A intro to Microservices Design Patterns](http://blog.arungupta.me/microservice-design-patterns/)
 * [REST vs Messaging for Microservices](http://www.slideshare.net/ewolff/rest-vs-messaging-for-microservices)
-* [Pivotal Network](https://network.pivotal.io/)
-* [Solace Messaging for Pivotal Cloud Foundry Documentation](http://docs.pivotal.io/solace-messaging/)
+* [VMware Tanzu Network](https://network.pivotal.io/)
+* [Solace Messaging for VMware Tanzu Documentation](http://docs.pivotal.io/solace-messaging/)
 * [The Solace Developer Portal](http://dev.solace.com/)
